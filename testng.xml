@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Flipkart" parallel="tests" thread-count="1">
+    <test name="Googe Test">
+        <parameter name ="browser" value = "chrome"/>
+        <classes>
+            <class name="com.automatica.springselenium.tests.GoogleSearch" ></class>
+        </classes>
+    </test>
+
+    <test name="Yahoo Test">
+        <parameter name ="browser" value = "chrome"/>
+        <classes>
+            <class name="com.automatica.springselenium.tests.YahooSearch" ></class>
+        </classes>
+    </test>
+
+</suite>
