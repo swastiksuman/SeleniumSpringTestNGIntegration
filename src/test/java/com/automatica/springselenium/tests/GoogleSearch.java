@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 
 public class GoogleSearch extends Core{
 
-    @Autowired
     private GooglePage googlePage;
 
     @Test
     public void doGoogleSearch(){
-        googlePage.setSomeProperties("Hello Bhaiyya");
+        googlePage = new GooglePage(driver);
+    	googlePage.setSomeProperties("Hello Bhaiyya");
         googlePage.googleLogin();
     }
 

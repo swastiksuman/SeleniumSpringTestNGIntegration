@@ -1,14 +1,21 @@
 package com.automatica.springselenium.page;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class GooglePage {
 
     private String someProperties;
-
+    private WebDriver driver;
+    
+    public GooglePage(WebDriver driver){
+    	this.driver = driver;
+    }
+    
     public void googleLogin(){
-        System.out.println(someProperties);
+        driver.findElement(By.id("lga")).sendKeys("Verizon");
     }
 
     public String getSomeProperties() {
