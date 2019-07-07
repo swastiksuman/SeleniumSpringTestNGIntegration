@@ -7,8 +7,8 @@ import com.automatica.springselenium.page.HomePage;
 public class OrderFlow extends Core{
 	
 	@Test
-	public void placeOrder() {
+	public void placeOrder() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
-		homePage.searcProduct().selectFirstElement();
+		homePage.searcProduct().selectFirstElement().addToCartAndProceed();
 	}
 }

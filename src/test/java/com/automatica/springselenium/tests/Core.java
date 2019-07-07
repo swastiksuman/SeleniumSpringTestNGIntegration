@@ -19,5 +19,6 @@ public class Core extends AbstractTestNGSpringContextTests {
     public void beforeTest(String browser){
     	driver = new SafariDriver();
     	driver.get("http://automationpractice.com/index.php");
+    	driver.manage().window().maximize();
     }
 }

@@ -22,7 +22,8 @@ public class SearchPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void selectFirstElement() {
+	public ProductPage selectFirstElement() {
 		firstElement.get(0).click();
+		return new ProductPage(driver);
 	}
 }
