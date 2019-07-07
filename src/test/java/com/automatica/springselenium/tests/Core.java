@@ -18,6 +18,6 @@ public class Core extends AbstractTestNGSpringContextTests {
     @Parameters({"browser"})
     public void beforeTest(String browser){
     	driver = new SafariDriver();
-    	driver.get("http://www.google.co.in");
+    	driver.get("http://automationpractice.com/index.php");
     }
 }

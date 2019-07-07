@@ -3,15 +3,7 @@
     <test name="Googe Test">
         <parameter name ="browser" value = "chrome"/>
         <classes>
-            <class name="com.automatica.springselenium.tests.GoogleSearch" ></class>
+            <class name="com.automatica.springselenium.tests.OrderFlow" ></class>
         </classes>
     </test>
-
-    <test name="Yahoo Test">
-        <parameter name ="browser" value = "chrome"/>
-        <classes>
-            <class name="com.automatica.springselenium.tests.YahooSearch" ></class>
-        </classes>
-    </test>
-
 </suite>
