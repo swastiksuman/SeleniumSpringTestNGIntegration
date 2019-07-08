@@ -26,6 +26,5 @@ public class Core extends AbstractTestNGSpringContextTests {
     @AfterTest
     public void afterTest() {
     	driver.close();
-    	driver.quit();
     }
 }
