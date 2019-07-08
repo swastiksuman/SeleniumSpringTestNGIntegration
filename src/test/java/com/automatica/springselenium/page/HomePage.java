@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.springframework.stereotype.Component;
 
 
-public class HomePage {
+public class HomePage implements BasePage{
 
     @FindBy(id = "search_query_top")
     private WebElement searchBox;
@@ -28,4 +28,9 @@ public class HomePage {
         searchButton.click();
         return new SearchPage(driver);
     }
+
+	@Override
+	public BasePage doAction() {
+		return searcProduct();
+	}
 }

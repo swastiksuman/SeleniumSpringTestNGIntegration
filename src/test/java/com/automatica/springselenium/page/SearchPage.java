@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SearchPage {
+public class SearchPage implements BasePage{
 	
 	@FindAll({
 	@FindBy(xpath = "//a[@class='product-name']")
@@ -25,5 +25,10 @@ public class SearchPage {
 	public ProductPage selectFirstElement() {
 		firstElement.get(0).click();
 		return new ProductPage(driver);
+	}
+
+	@Override
+	public BasePage doAction() {
+		return selectFirstElement();
 	}
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProductPage {
+public class ProductPage implements BasePage{
 	
 	@FindBy(xpath = "//a[@title='Proceed to checkout']")
 	private WebElement proceedCheckOut;
@@ -24,5 +24,16 @@ public class ProductPage {
 		addToCartButton.click();
 		Thread.sleep(3000);
 		proceedCheckOut.click();
+	}
+
+	@Override
+	public BasePage doAction() {
+		try {
+			addToCartAndProceed();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

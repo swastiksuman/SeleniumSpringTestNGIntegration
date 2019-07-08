@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -20,5 +21,11 @@ public class Core extends AbstractTestNGSpringContextTests {
     	driver = new SafariDriver();
     	driver.get("http://automationpractice.com/index.php");
     	driver.manage().window().maximize();
+    }
+    
+    @AfterTest
+    public void afterTest() {
+    	driver.close();
+    	driver.quit();
     }
 }

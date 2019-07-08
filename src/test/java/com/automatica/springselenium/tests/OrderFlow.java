@@ -9,6 +9,6 @@ public class OrderFlow extends Core{
 	@Test
 	public void placeOrder() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
-		homePage.searcProduct().selectFirstElement().addToCartAndProceed();
+		homePage.doAction().doAction().doAction();
 	}
 }
