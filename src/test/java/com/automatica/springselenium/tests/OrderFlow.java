@@ -10,7 +10,7 @@ public class OrderFlow extends Core{
 	@Test
 	public void placeOrder() throws InterruptedException {
 		BasePage homePage = new HomePage(driver);
-		for(int i=0;i<3;i++) {
+		while(homePage!=null) {
 			homePage = homePage.doAction();
 		}
 	}
